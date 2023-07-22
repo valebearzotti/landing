@@ -1,8 +1,6 @@
 import { Nav } from '@/ui/nav'
-import { Inter } from 'next/font/google'
 import Head from 'next/head'
-
-const inter = Inter({ subsets: ['latin'] })
+import Link from 'next/link'
 
 export default function Home() {
   return (
@@ -43,7 +41,7 @@ export default function Home() {
             I'm a huge music enthusiast. I taught myself piano during the pandemic and later took music theory classes. Outside of it, I find joy reading, solving puzzles, and every once in a while, snowboarding. Yeah, I'm a winter person.
           </p>
           <p>
-            This is pretty much it but if you want to get in touch you can <a className='underline' href="mailto:valebearzotti1@gmail.com">write me an email</a> or follow me on <a className='underline' href="https://twitter.com/valebearzotti">Twitter</a> and <a className='underline' href="https://instagram.com/valebearzotti">Instagram</a>.
+            This is pretty much it but if you want to get in touch you can <Link className='underline' href="mailto:valebearzotti1@gmail.com">write me an email</Link> or follow me on <Link className='underline' href="https://twitter.com/valebearzotti">Twitter</Link> and <Link className='underline' href="https://instagram.com/valebearzotti">Instagram</Link>.
           </p>
           <p>
             🚀

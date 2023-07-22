@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { useRouter } from "next/router"
 
 export const Nav = () => {
@@ -18,13 +19,13 @@ export const Nav = () => {
     return (
         <nav className="flex flex-row w-full justify-between text-xl border-b-2 px-4 mt-4">
             {routes.map((route, index) => (
-                <a
+                <Link
                     key={index}
                     className={`py-4 ${isActive(route.path)}`}
                     href={route.path}
                 >
                     {route.name}
-                </a>
+                </Link>
             ))}
         </nav>
     )
