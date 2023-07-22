@@ -25,7 +25,7 @@ export default function Home() {
             I started my coding journey back in 2018 when I was studying for becoming a Civil Engineer. It was just a subject but the one I enjoyed the most, and ended up switching to pursue a Systems Engineering degree in 2020.
           </p>
           <p>
-            My first programming languages were C and Python but I quickly moved to Web Development. Overall, what I really wanted to do is to build stuff and see them live out there in the world. I couldn't build a bridge like I thought I would end up doing in my first years of college, but I certainly could achieve a lot with coding too.
+            My first programming languages were C and Python but I quickly moved to Web Development. Overall, what I really wanted to do is to build stuff and see them live out there in the world. I couldn&apos;t build a bridge like I thought I would end up doing in my first years of college, but I certainly could achieve a lot with coding too.
           </p>
           <p>
             I started with the basics then got into <b>React</b>, and eventually <b>Next</b>.
@@ -38,7 +38,7 @@ export default function Home() {
             But anyways, <i>not everything is about work</i>.
           </p>
           <p>
-            I'm a huge music enthusiast. I taught myself piano during the pandemic and later took music theory classes. Outside of it, I find joy reading, solving puzzles, and every once in a while, snowboarding. Yeah, I'm a winter person.
+            I&apos;m a huge music enthusiast. I taught myself piano during the pandemic and later took music theory classes. Outside of it, I find joy reading, solving puzzles, and every once in a while, snowboarding. Yeah, I&apos;m a winter person.
           </p>
           <p>
             This is pretty much it but if you want to get in touch you can <Link className='underline' href="mailto:valebearzotti1@gmail.com">write me an email</Link> or follow me on <Link className='underline' href="https://twitter.com/valebearzotti">Twitter</Link> and <Link className='underline' href="https://instagram.com/valebearzotti">Instagram</Link>.
