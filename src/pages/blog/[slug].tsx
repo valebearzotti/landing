@@ -4,7 +4,8 @@ import { Layout } from "@/ui/layout";
 import { GetStaticPaths, GetStaticProps } from "next";
 import { NotionRenderer } from "react-notion-x";
 
-export default function BlogPost({ content }: any) {
+export default function BlogPost({ content }: { content: any }) {
+
     return (
         <Layout>
             <NotionRenderer
@@ -65,6 +66,13 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     })
 
     // Me traigo el contenido de la página que tiene el ID que me traje en el paso anterior
+
+    if (!post.results[0]) {
+        return {
+            notFound: true,
+        }
+    }
+
     const page = await notion_api.getPage(post.results[0].id)
 
     return {
