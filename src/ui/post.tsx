@@ -1,7 +1,7 @@
 import { SmallArrow } from "@/ui/arrow";
 import Link from "next/link";
 
-export const Post = ({ post }: any) => {
+export const Post = ({ post }: { post: any }) => {
 
     // Convertir la fecha de creación a un formato más legible. Puede ser que no tenga fecha de creación, en ese caso uso la fecha que se creo el registro.
     const dateToConvert = post.properties.Date.date?.start || post.created_time
