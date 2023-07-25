@@ -17,7 +17,7 @@ export const Nav = () => {
     ]
 
     return (
-        <nav className="flex flex-row w-full justify-between text-xl border-b-2 px-4 mt-4">
+        <nav className="flex flex-row w-full justify-between text-sm border-b-2 px-1 mt-1 sm:text-xl sm:px-4 sm:mt-4">
             {routes.map((route, index) => (
                 <Link
                     key={index}
