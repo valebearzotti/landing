@@ -1,7 +1,8 @@
+import type { IPost } from "@/types/post";
 import { SmallArrow } from "@/ui/arrow";
 import Link from "next/link";
 
-export const Post = ({ post }: { post: any }) => {
+export const Post = ({ post }: { post: IPost }) => {
 
     // Convertir la fecha de creación a un formato más legible. Puede ser que no tenga fecha de creación, en ese caso uso la fecha que se creo el registro.
     const dateToConvert = post.properties.Date.date?.start || post.created_time
@@ -10,19 +11,21 @@ export const Post = ({ post }: { post: any }) => {
     return (
         <div className="flex flex-col w-full">
             <h3>
-                {post.properties.Page.title[0].plain_text}
+                {post.properties.Page.title[0]?.plain_text || 'Untitled'}
             </h3>
             <h4 className="text-gray-500 text-sm italic mb-2">
                 {date}
             </h4>
             <p className="text-gray-500 text-sm italic mb-2">
-                {post.properties.Preview.rich_text[0].plain_text}
+                {post.properties.Preview.rich_text[0]?.plain_text || 'No preview available'}
             </p>
             <div className="flex w-fit justify-center border-b-2 border-white transition-all duration-300 ease-in-out hover:border-gray-500">
-                <Link href={`/blog/${post.properties.Slug.rich_text[0].plain_text}`} key={post.id} className="flex flex-row items-center gap-2">
-                    Read more
-                    <SmallArrow />
-                </Link>
+                {typeof post.properties.Slug.rich_text[0]?.plain_text !== 'undefined' && (
+                    <Link href={`/blog/${post.properties.Slug.rich_text[0]?.plain_text}`} key={post.id} className="flex flex-row items-center gap-2">
+                        Read more
+                        <SmallArrow />
+                    </Link>
+                )}
             </div>
         </div>
     )
