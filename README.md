@@ -15,3 +15,4 @@ Redid my resume using Next.js and deployed it to Vercel. Went for the cleanest l
 - [ ] Set up Notion as a CMS
 - [x] 404 page
 - [ ] 500 page
+- [ ] Type Notion responses
